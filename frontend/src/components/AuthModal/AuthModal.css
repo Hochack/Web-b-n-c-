@@ -1,0 +1,398 @@
+.container-register,
+.container-login {
+    border-radius: 10px;
+    /* color: #1ebff0; */
+    width: 320px;
+    padding-left: 25px;
+    border: 1px solid #1ebff0;
+    max-height: 400px;
+}
+
+.login-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.login-header h1 {
+    text-align: center;
+    color: #050813;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Bao khung chứa input */
+.container-input {
+    position: relative;
+    /* Để icon và label có thể được định vị tương đối */
+    width: 250px;
+    /* Chiều rộng của input */
+    flex: 1 0 5rem;
+}
+
+.input-left {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    /* Màu viền mặc định */
+    border-radius: 8px;
+    /* Bo góc cho khung */
+    background-color: #fff;
+}
+
+.container-input input {
+    width: 100%;
+    /* Chiếm toàn bộ chiều rộng của container */
+    padding: 12px 40px 12px 10px;
+    /* Padding phải lớn hơn để chừa chỗ cho icon */
+    /* margin: 0.1rem 0; */
+    /* Khoảng cách giữa các input */
+    font-size: 12px;
+    /* Kích thước chữ */
+    border: 1px solid #d1d5db;
+    /* Màu viền mặc định */
+    border-radius: 8px;
+    /* Bo góc */
+    outline: none;
+    /* Bỏ viền khi focus */
+    transition: border-color 0.3s ease;
+    /* Hiệu ứng chuyển màu viền khi focus */
+}
+
+.container-login .container-input {
+    margin: 0.3rem 0;
+}
+
+.input-left input {
+    border: none;
+    margin: 0;
+    margin-left: 25px;
+}
+
+/* Khi input được focus, đổi màu viền */
+.container-input input:focus {
+    border-color: #7b3ff3;
+    /* Màu viền khi focus */
+}
+
+.captcha-image,
+.container-input label {
+    position: absolute;
+    /* Định vị tuyệt đối để có thể di chuyển */
+    top: 50%;
+    /* Canh giữa theo chiều dọc */
+    left: 10px;
+    /* Căn lề trái */
+    transform: translateY(-50%);
+    /* Đảm bảo vị trí nằm chính giữa input */
+    color: #9CA3AF;
+    /* Màu chữ nhạt */
+    font-size: 12px;
+    /* Kích thước chữ */
+    pointer-events: none;
+    /* Không cho phép tương tác với label */
+    transition: 0.3s ease all;
+    /* Hiệu ứng chuyển đổi vị trí và kích thước */
+}
+
+.input-left label {
+    left: 30px;
+}
+
+.container-input input:focus+label,
+.container-input input:not(:placeholder-shown)+label {
+    /* Đẩy lên nằm ở khung viền */
+    top: 0.175rem;
+    padding: 0 0 0.25rem;
+    background-color: #F6F8FF;
+    display: block;
+    font-size: 0.875rem;
+    left: 0.5rem;
+    color: #7b3ff3;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* Phong cách cho thẻ select */
+.input-phone select {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    padding: 11px 2px 10px 2px;
+    border: 1px solid #00ffa6;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.container-input .icon {
+    position: absolute;
+    left: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Icon phong bì nằm bên phải input */
+.check svg,
+.check .fa,
+.icon svg {
+    position: absolute;
+    /* Định vị tuyệt đối để icon nằm trong input */
+    right: -40px;
+    /* Căn lề phải */
+    top: 50%;
+    /* Canh giữa theo chiều dọc */
+    transform: translateY(-50%);
+    /* Đảm bảo icon nằm giữa theo chiều dọc */
+    width: 20px;
+    /* Chiều rộng của icon */
+    height: 20px;
+    /* Chiều cao của icon */
+}
+
+.icon i {
+    position: absolute;
+    /* Định vị tuyệt đối để icon nằm trong input */
+    right: -280px;
+    /* Căn lề phải */
+    top: 50%;
+    /* Canh giữa theo chiều dọc */
+    transform: translateY(-50%);
+    /* Đảm bảo icon nằm giữa theo chiều dọc */
+    width: 20px;
+    /* Chiều rộng của icon */
+    height: 20px;
+    /* Chiều cao của icon */
+    background-color: none;
+}
+
+.icons span {
+    left: 0.5rem;
+    cursor: pointer;
+}
+
+.check .fa,
+.check svg {
+    right: 100%;
+    /* Căn lề phải */
+    /* color: #3ff399; */
+    transition: 0.3s;
+}
+
+#check-valid {
+    display: none;
+    color: green;
+}
+
+#check-invalid {
+    display: none;
+    color: red;
+}
+
+/* Icon điện thoại nằm bên phải input */
+.input-left .icon svg {
+    right: 10px;
+    /* Căn lề phải */
+}
+
+.calendar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 94%;
+    background-color: white;
+    border: 1px solid #1ebff0;
+    border-radius: 5%;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 99;
+}
+
+.hidden {
+    display: none;
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#calendar-days table {
+    width: 100%;
+}
+
+#calendar-days td {
+    width: 14.28%;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#calendar-days td:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar-controls svg {
+    width: 20px;
+    height: 20px;
+    color: #5bbfc7;
+}
+
+.active,
+.actives,
+.calendar-controls svg:hover {
+    border-radius: 20%;
+    border: 1px salmon solid;
+    color: #5bbfc7;
+}
+
+.actives {
+    color: coral;
+}
+
+/* Đặt ẩn SVG thay thế ban đầu */
+.icon .svg-replacement {
+    display: none;
+}
+
+/* Khi hover vào icon, ẩn SVG mặc định và hiển thị SVG thay thế */
+.icon.active .svg-default,
+.icon:hover .svg-default {
+    display: none;
+}
+
+.icon.active .svg-replacement,
+.icon:hover .svg-replacement {
+    display: block;
+}
+
+.input-submit input {
+    cursor: pointer;
+    width: 120%;
+    background-color: #7b3ff3;
+}
+
+.menu_btn {
+    position: relative;
+    flex: 1 100 40px;
+    height: 32px;
+    margin: 2px;
+    padding: 2px;
+    color: #1101f8;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    border: 1px solid white;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    max-width: 100%;
+    /* Giới hạn chiều rộng không vượt quá cha */
+    max-height: 100%;
+    /* Giới hạn chiều cao không vượt quá cha */
+    object-fit: contain;
+    /* Dùng cho hình ảnh/video để đảm bảo giữ tỷ lệ */
+}
+
+.menu_btn:hover {
+    background-color: rgba(15, 15, 15, 0.1);
+}
+
+.menu_btn:focus-within {
+    /* áp dụng được khi là button */
+    background-color: lightblue;
+}
+
+.input-submit .btn {
+    display: flex;
+}
+
+.input-submit .menu_btn {
+    box-shadow: none;
+}
+
+.forgotpassword {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+    /* gạch dưới chân */
+    cursor: pointer;
+}
+
+/* Để có thêm hiệu ứng đẹp khi placeholder */
+input::placeholder {
+    text-align: right;
+    /* Căn giữa placeholder */
+    color: #999;
+    /* Màu của placeholder */
+}
+
+/* thông báo tại nút chỗ (spot-message */
+.spot-message {
+    color: #f87d0a;
+    font-size: 14px;
+    display: flex;
+    z-index: 1000;
+    /* Đảm bảo thông báo nằm trên cùng */
+    animation: fadeIn 0.3s ease-in-out;
+    position: absolute;
+    /* Đặt thông báo nổi phía trên */
+    background-color: #fffdfd;
+    border-radius: 5px;
+    /* top: 70%; */
+    margin-bottom: 25%;
+}
+
+.spot-message .fa {
+    color: #f87d0a;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.input-captcha img {
+    margin-left: 40px;
+}
+
+.check.invalid::after,
+.check.valid::after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    top: 30%;
+    left: -20px;
+}
+
+.check.valid::after {
+    content: '\2714';
+    /* Unicode ký tự: ✓ */
+    color: green;
+}
+
+.check.invalid::after {
+    content: '\2716';
+    /* Unicode ký tự: ✖ */
+    color: red;
+}

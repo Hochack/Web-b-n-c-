@@ -1,0 +1,67 @@
+:root {
+    --light: #f6f6f9;
+    --primary: #1976D2;
+    --light-primary: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #363949;
+    --danger: #D32F2F;
+    --light-damger: #FECDD3;
+    --warning: #FBC02D;
+    --light-warning: #FFF2C6;
+    --success: #388E3C;
+    --light-success: #BBF7D0;
+}
+
+
+html,
+body {
+    /* overflow-x: hidden; */
+    /* Ngăn chặn cuộn ngang */
+    -webkit-text-size-adjust: 100%;
+    /* Giữ nguyên kích thước chữ */
+    -ms-text-size-adjust: 100%;
+    /* Giữ nguyên kích thước chữ */
+    /*  -webkit-tap-highlight-color: transparent; */
+    /* Tắt highlight khi tap trên thiết bị di động */
+    -webkit-overflow-scrolling: touch;
+    /* Cho phép cuộn mượt trên iOS */
+    scroll-behavior: smooth;
+    /* Cuộn mượt */
+    overscroll-behavior: contain;
+    /* Ngăn chặn cuộn quá mức */
+    user-select: none;
+    /* Ngăn chặn chọn văn bản */
+    -webkit-user-select: none;
+    /* Ngăn chặn chọn văn bản trên iOS */
+    -moz-user-select: none;
+    /* Ngăn chặn chọn văn bản trên Firefox */
+    -ms-user-select: none;
+    /* Ngăn chặn chọn văn bản trên IE/Edge */
+    touch-action: manipulation;
+    /* Cho phép cuộn và kéo nhưng không cho phép zoom bằng double-tap  */
+}
+
+header {
+    position: sticky;
+    /* hoặc fixed nếu muốn luôn nổi */
+    top: 0;
+    z-index: 1000;
+    /* đảm bảo nằm trên các phần tử khác */
+    background-color: #fff;
+    /* hoặc màu nền tùy theo thiết kế */
+}
+
+/* Chế độ dọc (mobile) */
+@media (orientation: portrait) {
+    body {
+        /* background-color: var(--grey); */
+    }
+}
+
+/* Chế độ ngang ( */
+@media (orientation: landscape) {
+    body {
+        /* background: var(--light); */
+    }
+}
