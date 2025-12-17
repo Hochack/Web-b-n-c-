@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run build:frontend && npm-run-all --parallel start:backend serve:frontend",
+    "start": "npm-run-all --parallel start:backend serve:frontend",
     "start:dev": "npm-run-all --parallel start:frontend start:backend",
     "start:frontend": "npm run start --prefix frontend",
     "start:backend": "npm run start --prefix backend",
