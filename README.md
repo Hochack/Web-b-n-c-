@@ -65,13 +65,11 @@ npm start
 - Frontend: http://localhost:8080
 - Backend API: http://localhost:5000 (ví dụ: http://localhost:5000/api/products)
 
-Ghi chú và xử lý lỗi thường gặp
+## Deploy web
+#Bước 1: Cài đặt công cụ (Chỉ làm 1 lần đầu tiên)
+npm install -g firebase-tools
 
-- Nếu không khởi động được backend do lỗi kết nối MongoDB, kiểm tra `backend/.env` và đảm bảo network (với Atlas cho phép IP hiện tại) và credentials đúng.
-- Nếu frontend không kết nối tới API, kiểm tra proxy trong `frontend/webpack.config.js` và CORS trong `backend/src/index.js`.
-- Để chạy backend riêng lẻ: `cd backend; npm run start`.
-- Để build frontend cho production: `cd frontend; npm run build`.
+Lưu ý: nếu lỗi gõ "sudo" trước
 
-Liên hệ
+firebase login
 
-- Thêm thông tin liên hệ hoặc hướng dẫn đóng gói tùy theo nhu cầu.
