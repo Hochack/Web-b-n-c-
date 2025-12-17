@@ -45,13 +45,13 @@ module.exports = {
     liveReload: true, // Đảm bảo reload toàn trang khi HMR fail
 
     // ✅ Cấu hình proxy:
-    proxy: [
-      {
-        context: ["/api", "/uploads"], // Proxy tất cả các yêu cầu đến /api, /uploads tới backend
-        target: "https://shoply-dfi8.onrender.com", // Địa chỉ backend, có thể là IP hoặc localhost
-        secure: false, // Tắt kiểm tra SSL, cần thiết nếu backend không dùng HTTPS
-        changeOrigin: true,
-      },
+    // proxy: [
+    //   {
+    //     context: ["/api", "/uploads"], // Proxy tất cả các yêu cầu đến /api, /uploads tới backend
+    //     target: "http://localhost:5000", // Địa chỉ backend, có thể là IP hoặc localhost
+    //     secure: false, // Tắt kiểm tra SSL, cần thiết nếu backend không dùng HTTPS
+    //     changeOrigin: true,
+    //   },
       // { 
       //   context: ["/uploads"], // Proxy tải proxy ảnh avatar từ backend
       //   target: "http://localhost:5000",
