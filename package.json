@@ -7,7 +7,7 @@
     "start:dev": "npm-run-all --parallel start:frontend start:backend",
     "start:frontend": "npm run start --prefix frontend",
     "start:backend": "npm run start --prefix backend",
-    "build": "npm-run-all --parallel build:frontend build:backend",
+    "build": "npm install --prefix frontend && npm-run-all --parallel build:frontend build:backend",
     "build:frontend": "npm run build --prefix frontend",
     "build:backend": "echo \"Backend does not require a build step\"",
     "serve:frontend": "serve -s frontend/build"
